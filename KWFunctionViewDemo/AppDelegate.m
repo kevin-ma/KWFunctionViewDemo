@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "KWViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    KWViewController *vc = [[KWViewController alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
+    UINavigationController *navVc = [[UINavigationController alloc] initWithRootViewController:vc];
+    navVc.navigationBar.tintColor = [UIColor blackColor];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleDone target:nil action:nil];
+    vc.navigationItem.backBarButtonItem = backItem;
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navVc;
+    [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;
 }

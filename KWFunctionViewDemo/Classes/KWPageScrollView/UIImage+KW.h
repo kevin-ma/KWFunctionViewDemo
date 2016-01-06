@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIImage+KW.h
 //  KWFunctionViewDemo
 //
 //  Created by 凯文马 on 16/1/4.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UIImage (KW)
 
+- (UIImage *)imageWithAlphaComponent:(CGFloat)alpha;
 
 @end
-

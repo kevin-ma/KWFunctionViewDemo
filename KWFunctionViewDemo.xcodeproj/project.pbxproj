@@ -9,23 +9,36 @@
 /* Begin PBXBuildFile section */
 		0A85CC571C3A19EA008DE84B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC561C3A19EA008DE84B /* main.m */; };
 		0A85CC5A1C3A19EA008DE84B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC591C3A19EA008DE84B /* AppDelegate.m */; };
-		0A85CC5D1C3A19EA008DE84B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC5C1C3A19EA008DE84B /* ViewController.m */; };
-		0A85CC601C3A19EA008DE84B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A85CC5E1C3A19EA008DE84B /* Main.storyboard */; };
+		0A85CC5D1C3A19EA008DE84B /* KWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC5C1C3A19EA008DE84B /* KWViewController.m */; };
 		0A85CC621C3A19EA008DE84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A85CC611C3A19EA008DE84B /* Assets.xcassets */; };
 		0A85CC651C3A19EA008DE84B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A85CC631C3A19EA008DE84B /* LaunchScreen.storyboard */; };
+		0A85CC711C3A3FD1008DE84B /* KWPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC701C3A3FD1008DE84B /* KWPageScrollView.m */; };
+		0A85CC741C3A4612008DE84B /* KWWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC731C3A4612008DE84B /* KWWebImageManager.m */; };
+		0A85CC771C3A5B29008DE84B /* UIImage+KW.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC761C3A5B29008DE84B /* UIImage+KW.m */; };
+		0A85CC7A1C3A63F6008DE84B /* KWShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC791C3A63F6008DE84B /* KWShowViewController.m */; };
+		0A85CC861C3B93CF008DE84B /* KWNoticeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A85CC851C3B93CF008DE84B /* KWNoticeScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A85CC521C3A19EA008DE84B /* KWFunctionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KWFunctionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A85CC561C3A19EA008DE84B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0A85CC581C3A19EA008DE84B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0A85CC591C3A19EA008DE84B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0A85CC5B1C3A19EA008DE84B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0A85CC5C1C3A19EA008DE84B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0A85CC5F1C3A19EA008DE84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A85CC581C3A19EA008DE84B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
+		0A85CC591C3A19EA008DE84B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../../AppDelegate.m; sourceTree = "<group>"; };
+		0A85CC5B1C3A19EA008DE84B /* KWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KWViewController.h; path = ../../KWViewController.h; sourceTree = "<group>"; };
+		0A85CC5C1C3A19EA008DE84B /* KWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KWViewController.m; path = ../../KWViewController.m; sourceTree = "<group>"; };
 		0A85CC611C3A19EA008DE84B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A85CC641C3A19EA008DE84B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A85CC661C3A19EA008DE84B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A85CC6F1C3A3FD1008DE84B /* KWPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWPageScrollView.h; sourceTree = "<group>"; };
+		0A85CC701C3A3FD1008DE84B /* KWPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWPageScrollView.m; sourceTree = "<group>"; };
+		0A85CC721C3A4612008DE84B /* KWWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWWebImageManager.h; sourceTree = "<group>"; };
+		0A85CC731C3A4612008DE84B /* KWWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWWebImageManager.m; sourceTree = "<group>"; };
+		0A85CC751C3A5B29008DE84B /* UIImage+KW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KW.h"; sourceTree = "<group>"; };
+		0A85CC761C3A5B29008DE84B /* UIImage+KW.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KW.m"; sourceTree = "<group>"; };
+		0A85CC781C3A63F6008DE84B /* KWShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWShowViewController.h; sourceTree = "<group>"; };
+		0A85CC791C3A63F6008DE84B /* KWShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWShowViewController.m; sourceTree = "<group>"; };
+		0A85CC841C3B93CF008DE84B /* KWNoticeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWNoticeScrollView.h; sourceTree = "<group>"; };
+		0A85CC851C3B93CF008DE84B /* KWNoticeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWNoticeScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +71,7 @@
 		0A85CC541C3A19EA008DE84B /* KWFunctionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				0A85CC581C3A19EA008DE84B /* AppDelegate.h */,
-				0A85CC591C3A19EA008DE84B /* AppDelegate.m */,
-				0A85CC5B1C3A19EA008DE84B /* ViewController.h */,
-				0A85CC5C1C3A19EA008DE84B /* ViewController.m */,
-				0A85CC5E1C3A19EA008DE84B /* Main.storyboard */,
+				0A85CC6C1C3A22A3008DE84B /* Classes */,
 				0A85CC611C3A19EA008DE84B /* Assets.xcassets */,
 				0A85CC631C3A19EA008DE84B /* LaunchScreen.storyboard */,
 				0A85CC661C3A19EA008DE84B /* Info.plist */,
@@ -77,6 +86,51 @@
 				0A85CC561C3A19EA008DE84B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A85CC6C1C3A22A3008DE84B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A85CC831C3B6C71008DE84B /* KWNoticeScrollView */,
+				0A85CC6E1C3A3F88008DE84B /* KWPageScrollView */,
+				0A85CC6D1C3A22A3008DE84B /* Main */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0A85CC6D1C3A22A3008DE84B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0A85CC581C3A19EA008DE84B /* AppDelegate.h */,
+				0A85CC591C3A19EA008DE84B /* AppDelegate.m */,
+				0A85CC5B1C3A19EA008DE84B /* KWViewController.h */,
+				0A85CC5C1C3A19EA008DE84B /* KWViewController.m */,
+				0A85CC781C3A63F6008DE84B /* KWShowViewController.h */,
+				0A85CC791C3A63F6008DE84B /* KWShowViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0A85CC6E1C3A3F88008DE84B /* KWPageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0A85CC6F1C3A3FD1008DE84B /* KWPageScrollView.h */,
+				0A85CC701C3A3FD1008DE84B /* KWPageScrollView.m */,
+				0A85CC721C3A4612008DE84B /* KWWebImageManager.h */,
+				0A85CC731C3A4612008DE84B /* KWWebImageManager.m */,
+				0A85CC751C3A5B29008DE84B /* UIImage+KW.h */,
+				0A85CC761C3A5B29008DE84B /* UIImage+KW.m */,
+			);
+			path = KWPageScrollView;
+			sourceTree = "<group>";
+		};
+		0A85CC831C3B6C71008DE84B /* KWNoticeScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0A85CC841C3B93CF008DE84B /* KWNoticeScrollView.h */,
+				0A85CC851C3B93CF008DE84B /* KWNoticeScrollView.m */,
+			);
+			path = KWNoticeScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +192,6 @@
 			files = (
 				0A85CC651C3A19EA008DE84B /* LaunchScreen.storyboard in Resources */,
 				0A85CC621C3A19EA008DE84B /* Assets.xcassets in Resources */,
-				0A85CC601C3A19EA008DE84B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +202,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A85CC5D1C3A19EA008DE84B /* ViewController.m in Sources */,
+				0A85CC5D1C3A19EA008DE84B /* KWViewController.m in Sources */,
+				0A85CC771C3A5B29008DE84B /* UIImage+KW.m in Sources */,
 				0A85CC5A1C3A19EA008DE84B /* AppDelegate.m in Sources */,
+				0A85CC741C3A4612008DE84B /* KWWebImageManager.m in Sources */,
+				0A85CC711C3A3FD1008DE84B /* KWPageScrollView.m in Sources */,
+				0A85CC861C3B93CF008DE84B /* KWNoticeScrollView.m in Sources */,
+				0A85CC7A1C3A63F6008DE84B /* KWShowViewController.m in Sources */,
 				0A85CC571C3A19EA008DE84B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,14 +216,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0A85CC5E1C3A19EA008DE84B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A85CC5F1C3A19EA008DE84B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0A85CC631C3A19EA008DE84B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -264,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KWFunctionViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cuimianshixiong.KWFunctionViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -275,6 +326,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KWFunctionViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cuimianshixiong.KWFunctionViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
