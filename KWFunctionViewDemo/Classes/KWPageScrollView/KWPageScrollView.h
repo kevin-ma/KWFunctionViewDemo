@@ -6,6 +6,8 @@
 //  Copyright © 2016年 凯文马. All rights reserved.
 //
 
+//  仅用于page数量较少的情况下
+
 #import <UIKit/UIKit.h>
 
 @class KWPageScrollView;
