@@ -10,6 +10,8 @@
 #import "KWWebImageManager.h"
 #import "UIImage+KW.h"
 
+NSUInteger const kPageScrollViewTag = 8989;
+
 @interface KWPageScrollView () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) UIPageControl *pageControl;
@@ -53,18 +55,6 @@
     [self addSubview:_pageControl];
 }
 
-- (void)setCurrentPage:(NSUInteger)currentPage
-{
-    [self setCurrentPage:currentPage withAnimation:NO];
-}
-
-- (void)setCurrentPage:(NSUInteger)currentPage withAnimation:(BOOL)animation
-{
-    _currentPage = currentPage;
-    [_pageControl setCurrentPage:currentPage];
-    // TODO: 切换
-}
-
 # pragma mark - public setting
 
 - (void)setImages:(NSArray *)images
@@ -80,14 +70,14 @@
     for (NSInteger i = 0; i < images.count + 2; i++) {
         UIImage *image = images[(i - 1) % images.count];
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(i * width, 0, width, height)];
-        btn.tag = i % images.count;
+        btn.tag = i % images.count + kPageScrollViewTag;
         if ([image isKindOfClass:[NSString class]]) {
             [btn kw_setWebBackgroundImageWithUrl:(NSString *)image forState:UIControlStateNormal placeHolder:self.placeHolder finishAction:^(UIImage *image, NSString *url) {
-                [btn setBackgroundImage:[image imageWithAlphaComponent:0.4f] forState:UIControlStateHighlighted];
+                [btn setBackgroundImage:[image kw_imageWithAlphaComponent:0.4f] forState:UIControlStateHighlighted];
             }];
         } else {
             [btn setBackgroundImage:image forState:UIControlStateNormal];
-            [btn setBackgroundImage:[image imageWithAlphaComponent:0.4f] forState:UIControlStateHighlighted];
+            [btn setBackgroundImage:[image kw_imageWithAlphaComponent:0.4f] forState:UIControlStateHighlighted];
         }
         [btn addTarget:self action:@selector(imageBtnAction:) forControlEvents:UIControlEventTouchUpInside];
         [btn addTarget:self action:@selector(stopTimer) forControlEvents:UIControlEventTouchDown];
@@ -99,8 +89,11 @@
     self.pageControl.currentPage = 0;
 }
 
-- (void)addImage:(UIImage *)image
+- (void)addImage:(id)image
 {
+    if (![image isKindOfClass:[NSString class]] && ![image isKindOfClass:[UIImage class]]) {
+        return;
+    }
     NSMutableArray *temp = [self.images mutableCopy];
     [temp addObject:image];
     self.images = [temp copy];
@@ -186,11 +179,22 @@
     _scrollView.backgroundColor = backgroundColor;
 }
 
+- (void)setUnenabledUserInteractionIndex:(NSArray *)indexs
+{
+    for (NSNumber *num in indexs) {
+        if ([num isKindOfClass:[NSNumber class]] || [num isKindOfClass:[NSString class]]) {
+            NSUInteger index = num.integerValue;
+            UIButton *btn = [_scrollView viewWithTag:index + kPageScrollViewTag];
+            btn.userInteractionEnabled = NO;
+        }
+    }
+}
+
 # pragma mark - private method
 
 - (void)imageBtnAction:(UIButton *)sender
 {
-    NSUInteger index = sender.tag;
+    NSUInteger index = sender.tag - kPageScrollViewTag;
     if (self.selectAction) {
         self.selectAction(index);
     }
@@ -199,6 +203,7 @@
     }
     [self startTimer];
 }
+
 
 # pragma mark - UIScrollViewDelegate
 

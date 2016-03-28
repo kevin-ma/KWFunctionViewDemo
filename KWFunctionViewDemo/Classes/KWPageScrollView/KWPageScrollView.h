@@ -14,6 +14,12 @@
 
 @optional
 
+/**
+ *  点击某一个图片进行的代理方法
+ *
+ *  @param scrollView KWPageScrollView
+ *  @param index      点击的页面序号
+ */
 - (void)pageScrollView:(KWPageScrollView *)scrollView didSelectImageAtIndex:(NSUInteger)index;
 
 @end
@@ -33,9 +39,9 @@ typedef void(^KWPageScrollViewSelectBlock)(NSUInteger index);
 @property (nonatomic, weak, readonly) UIScrollView *scrollView;
 
 /**
- *  当前页面（设置没有实现）
+ *  当前页面序号
  */
-@property (nonatomic, assign) NSUInteger currentPage;
+@property (nonatomic, assign, readonly) NSUInteger currentPage;
 
 /**
  *  一共有多少页面
@@ -45,7 +51,7 @@ typedef void(^KWPageScrollViewSelectBlock)(NSUInteger index);
 /**
  *  每页展示的一些图片信息
  */
-@property (nonatomic, strong) NSArray<UIImage *> *images;
+@property (nonatomic, strong) NSArray *images;
 
 /**
  *  代理，也可以通过block去执行一些操作
@@ -58,7 +64,7 @@ typedef void(^KWPageScrollViewSelectBlock)(NSUInteger index);
 @property (nonatomic, copy) KWPageScrollViewSelectBlock selectAction;
 
 /**
- *  页码指示器其他的颜色
+ *  页码指示器未选中的颜色
  */
 @property (nonatomic, strong) UIColor *pageTintColor;
 
@@ -73,14 +79,11 @@ typedef void(^KWPageScrollViewSelectBlock)(NSUInteger index);
 @property (nonatomic, assign) CGFloat autoScrollInterval;
 
 /**
- *  切换当前显示的页面（没有实现）
+ *  添加新的需要显示的图片
  *
- *  @param currentPage 要设置的页码
- *  @param animation   是否带有动画
+ *  @param image 可以是UIImage对象或者是NSString对象
  */
-- (void)setCurrentPage:(NSUInteger)currentPage withAnimation:(BOOL)animation;
+- (void)addImage:(id)image;
 
-
-- (void)addImage:(UIImage *)image;
-
+//- (void)setUnenabledUserInteractionIndex:(NSArray *)indexs;
 @end

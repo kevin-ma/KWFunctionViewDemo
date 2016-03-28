@@ -10,6 +10,6 @@
 
 @interface UIImage (KW)
 
-- (UIImage *)imageWithAlphaComponent:(CGFloat)alpha;
+- (UIImage *)kw_imageWithAlphaComponent:(CGFloat)alpha;
 
 @end

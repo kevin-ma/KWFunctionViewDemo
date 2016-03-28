@@ -10,13 +10,12 @@
 
 @implementation UIImage (KW)
 
-- (UIImage *)imageWithAlphaComponent:(CGFloat)alpha
+- (UIImage *)kw_imageWithAlphaComponent:(CGFloat)alpha
 {
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
-    
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGRect area = CGRectMake(0, 0, self.size.width, self.size.height);
-    
+
     CGContextScaleCTM(ctx, 1, -1);
     CGContextTranslateCTM(ctx, 0, -area.size.height);
     
@@ -29,7 +28,6 @@
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
-    
     return newImage;
 }
 
